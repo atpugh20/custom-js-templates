@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Templates</title>
+    </head>
+    <body>
+        <img data-src="main_banner" />
+        <h1>Title of the Page</h1>
+        <p>This is going to test out the different tempate methods I could do.</p>
+        <hr />
+        <h2 data-content="location"></h2>
+        <p>This conference will take place in <span data-content="city"></span>.</p>
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Room</th>
+            </tr>
+            <tr>
+                <td>Room Number</td>
+                <td data-content="speaker_room"></td>
+            </tr>
+            <tr>
+                <td>Booth Number</td>
+                <td data-content="booth_num"></td>
+            </tr>
+        </table>
+        <p>The website of the location can be found here <a data-href="location">Location Website</a></p>
+    </body>
+
+    <script src="index.js"></script>
+</html>
