@@ -6,10 +6,21 @@ window.contentVars = {
     location: "Vancouver Convention Centre",
     city: "Vancouver",
     address: "1055 Canada Pl<br>Vancouver, BC V6C 0C3<br>Canada",
+    year: "2027",
 
     // Rooms
-    speaker_room: "TBD",
     booth_num: "TBD",
+    speaker_room: "TBD",
+    maude_room: "TBD",
+    timely_topics_room: "TBD",
+    all_reception_room: "TBD",
+
+    // Event Names
+    all_reception_name: "TBD",
+
+    // Prices
+    badge_price: "25",
+    all_reception_price: "30",
 
     // USCAP Info
     organization: "USCAP",
@@ -40,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const key = e.dataset.content;
 
         if (window.contentVars[key]) {
-            e.textContent = window.contentVars[key];
+            e.innerHTML = window.contentVars[key];
         }
     }
 
