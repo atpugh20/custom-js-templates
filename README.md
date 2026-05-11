@@ -6,7 +6,7 @@ To improve consistency and reduce manual updates across USCAP websites, we use a
 
 This system allows shared content (such as “Foundation”, locations, pricing, and links) to be updated in one place and automatically reflected across the site.
 
-It is designed to work within Divi 4 and Divi5 using a global script and requires no backend changes.
+It is designed to work within Divi4 and Divi5 using a global script and requires no backend changes.
 
 ---
 
