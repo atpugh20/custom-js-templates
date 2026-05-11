@@ -1,43 +1,3 @@
-//================
-// HTML VARIABLES
-//================
-window.contentVars = {
-    // Location
-    location: "Vancouver Convention Centre",
-    city: "Vancouver",
-    address: "1055 Canada Pl<br>Vancouver, BC V6C 0C3<br>Canada",
-    year: "2027",
-
-    // Rooms
-    booth_num: "TBD",
-    speaker_room: "TBD",
-    maude_room: "TBD",
-    timely_topics_room: "TBD",
-    all_reception_room: "TBD",
-
-    // Event Names
-    all_reception_name: "TBD",
-
-    // Prices
-    badge_price: "25",
-    all_reception_price: "30",
-
-    // USCAP Info
-    organization: "USCAP",
-};
-
-window.srcVars = {
-    logo: "https://2027am.uscap.org/wp-content/uploads/2026/03/molecule_uscap_orange.png",
-    main_banner: "https://2027am.uscap.org/wp-content/uploads/2026/04/AM2026-Logo-HORIZONTAL.png",
-    stacked_banner: "https://2027am.uscap.org/wp-content/uploads/2026/04/AM2026-Logo-STACKED.png",
-};
-
-window.hrefVars = {
-    location: "https://www.vancouverconventioncentre.com/",
-    my_uscap: "https://my.uscap.org",
-    registration: "https://uscap.org/2027am-registration",
-};
-
 //=======
 // MAIN
 //=======
@@ -47,29 +7,42 @@ document.addEventListener("DOMContentLoaded", () => {
     const hrefElements = document.querySelectorAll("[data-href]");
 
     // Content Templates
-    for (let e of contentElements) {
-        const key = e.dataset.content;
+    if (window.contentVars) {
+        for (let e of contentElements) {
+            const key = e.dataset.content;
 
-        if (window.contentVars[key]) {
-            e.innerHTML = window.contentVars[key];
+            if (window.contentVars[key]) {
+                e.innerHTML = window.contentVars[key];
+            }
         }
+    } else {
+        console.log("window.contentVars array not found.");
     }
 
     // Image Source Templates
-    for (let e of srcElements) {
-        const key = e.dataset.src;
+    if (window.srcVars) {
+        for (let e of srcElements) {
+            const key = e.dataset.src;
 
-        if (window.srcVars[key]) {
-            e.src = window.srcVars[key];
+            if (window.srcVars[key]) {
+                e.src = window.srcVars[key];
+            }
         }
+    } else {
+        console.log("window.srcVars array not found.");
     }
 
     // Website Link Templates
-    for (let e of hrefElements) {
-        const key = e.dataset.href;
+    if (window.hrefVars) {
+        for (let e of hrefElements) {
+            const key = e.dataset.href;
 
-        if (window.hrefVars[key]) {
-            e.href = window.hrefVars[key];
+            if (window.hrefVars[key]) {
+                e.href = window.hrefVars[key];
+                e.target = "_blank";
+            }
         }
+    } else {
+        console.log("window.hrefVars array not found.");
     }
 });
