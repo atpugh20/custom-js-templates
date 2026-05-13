@@ -24,8 +24,32 @@ window.contentVars = {
     badge_price: "25",
     all_reception_price: "30",
 
+    // Day Main Format
+    sat: "SAT, March 13",
+    sun: "SUN, March 14",
+    mon: "MON, March 15",
+    tue: "TUE, March 16",
+    wed: "WED, March 17",
+    thu: "THU, March 18",
+
+    // Day Small Format
+    sat_s: "03/13",
+    sun_s: "03/14",
+    mon_s: "03/15",
+    tue_s: "03/16",
+    wed_s: "03/17",
+    thu_s: "03/18",
+
+    // Travel
+    airport_name: "Vancouver International Airport (YVR)",
+    airport_dist: "14 km",
+    airport_drive_time: "35 to 45 minute",
+    delta_code: "NM526",
+    united_code: "ZRUR761337",
+
     // USCAP Info
     organization: "USCAP",
+    my_uscap: "https://my.uscap.org",
 };
 
 // Used to replace src attribute for images
@@ -39,6 +63,11 @@ window.srcVars = {
 window.hrefVars = {
     location: "https://www.vancouverconventioncentre.com/",
     my_uscap: "https://my.uscap.org",
-    registration: "https://uscap.org/2027am-registration",
+    registration: "https://uscap.org/2027am-registration", // Redirect
     abstracts: "https://my.uscap.org/uscap/abstract/abstract.cfm",
+    print_program: "", // XCD Event App Filter
+    poster_template: "", // XCD Link
+    accessibility: "https://www.vancouverconventioncentre.com/about-us/accessibility",
+    onpeak: "https://compass.onpeak.com/e/42USCAP2027HIR/2",
+    airport: "https://www.yvr.ca/en/passengers",
 };
